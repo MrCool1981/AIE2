@@ -12,6 +12,14 @@ def cosine_similarity(vector_a: np.array, vector_b: np.array) -> float:
     norm_b = np.linalg.norm(vector_b)
     return dot_product / (norm_a * norm_b)
 
+### SQUARED EUCLIDEAN FUNCITON ###
+
+def squared_euclidean_distance(vector_a: np.array, vector_b: np.array) -> float:
+    """Computes the squared Euclidean distance between two vectors."""
+    difference = vector_a - vector_b
+    squared_distance = np.dot(difference, difference)
+    return squared_distance
+
 
 class VectorDatabase:
     def __init__(self, embedding_model: EmbeddingModel = None):
@@ -31,6 +39,13 @@ class VectorDatabase:
             (key, distance_measure(query_vector, vector))
             for key, vector in self.vectors.items()
         ]
+
+        # updated to check for squared_euclidean_distance function
+
+        if distance_measure is squared_euclidean_distance:
+            # sort by distance in ascending order
+            return sorted(scores, key=lambda x: x[1])[:k]
+
         return sorted(scores, key=lambda x: x[1], reverse=True)[:k]
 
     def search_by_text(

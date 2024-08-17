@@ -1,8 +1,9 @@
-numpy==1.25.2
+numpy
 openai
-python-dotenv==1.0.0
+python-dotenv
 pandas
 scikit-learn
 ipykernel
 matplotlib
 plotly
+pypdf

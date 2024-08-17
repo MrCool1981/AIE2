@@ -1,6 +1,42 @@
 import os
 from typing import List
 
+from pypdf import PdfReader # pip install pypdf
+
+class PdfFileLoader:
+    def __init__(self, path: str, encoding: str = "utf-8"):
+        self.documents = []
+        self.path = path
+        self.encoding = encoding
+
+    def load(self):
+        if os.path.isdir(self.path):
+            self.load_directory()
+        elif os.path.isfile(self.path) and self.path.endswith(".pdf"):
+            self.load_file()
+        else:
+            raise ValueError(
+                "Provided path is neither a valid directory nor a .pdf file."
+            )
+
+    def load_file(self):
+        # the function updated to read pdf file and extract text from each page
+        extracted_text_in_pages = [page.extract_text() for page in PdfReader(self.path).pages]
+        text = "\n".join(extracted_text_in_pages)
+        self.documents.append(text)  
+
+    def load_directory(self):
+        for root, _, files in os.walk(self.path):
+            for file in files:
+                if file.endswith(".pdf"):
+                    extracted_text_in_pages = [page.extract_text() for page in PdfReader(os.path.join(root, file)).pages]
+                    text = "\n".join(extracted_text_in_pages)
+                    self.documents.append(text)
+
+    def load_documents(self):
+        self.load()
+        return self.documents
+
 
 class TextFileLoader:
     def __init__(self, path: str, encoding: str = "utf-8"):

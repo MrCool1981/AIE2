@@ -1,2 +1,9 @@
 openai
 ipykernel
+numpy
+python-dotenv
+pandas
+scikit-learn
+ipykernel
+matplotlib
+plotly
