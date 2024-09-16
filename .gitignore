@@ -1,9 +1,12 @@
 .env
 .venv/
 .w3d2/
+.w4d2/
 .gitignore
 Week 5/Day 1/DataRepository/
 Week 5/Day 1/finetuned_arctic/
 Week 5/Day 1/checkpoints/
 Week 5/Day 2/legal_summarization/
 Week 5/Day 2/llama381binstruct_summarize_short/
+Week 4/Day 2/DataRepository/
+Week 4/Day 2/.ipynb_checkpoints/
