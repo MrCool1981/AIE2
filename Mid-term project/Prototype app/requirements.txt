@@ -1,0 +1,9 @@
+langchain-community
+gradio
+langchain-openai
+langchain
+qdrant-client
+tiktoken
+langchain-qdrant
+PyMuPDF
+langchain_core

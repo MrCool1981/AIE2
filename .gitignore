@@ -2,6 +2,8 @@
 .venv/
 .w3d2/
 .w4d2/
+.w7d1/
+.midterm/
 .gitignore
 Week 5/Day 1/DataRepository/
 Week 5/Day 1/finetuned_arctic/
@@ -10,3 +12,6 @@ Week 5/Day 2/legal_summarization/
 Week 5/Day 2/llama381binstruct_summarize_short/
 Week 4/Day 2/DataRepository/
 Week 4/Day 2/.ipynb_checkpoints/
+Mid-term project/checkpoints/
+Mid-term project/finetuned_arctic/
+Mid-term project/Prototype app/__pycache__/
