@@ -9,6 +9,11 @@ from qdrant_client.http.models import Distance, VectorParams
 from langchain.prompts import ChatPromptTemplate
 import tiktoken
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
 
 ### SETUP FUNCTIONS ###
 def tiktoken_len(text):
@@ -62,7 +67,7 @@ def setup_vector_db():
 
 # define a global variable to store the retriever object
 retriever = setup_vector_db()
-qa_gpt4_llm = AzureChatOpenAI(azure_deployment="gpt-4", temperature=0) # GPT-4o model
+qa_gpt4_llm = AzureChatOpenAI(azure_deployment="gpt-4o-mini", temperature=0) # GPT-4o model
 
 # define a template for the RAG model
 rag_template = """

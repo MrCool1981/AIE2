@@ -3,8 +3,10 @@
 .w3d2/
 .w4d2/
 .w7d1/
+.w7d2/
 .midterm/
 .gitignore
+.app/
 Week 5/Day 1/DataRepository/
 Week 5/Day 1/finetuned_arctic/
 Week 5/Day 1/checkpoints/
