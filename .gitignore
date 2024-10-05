@@ -5,6 +5,8 @@
 .w7d1/
 .w7d2/
 .w8d1/
+.w8d2/
+.w8d2app/
 .midterm/
 .gitignore
 .app/
@@ -21,3 +23,5 @@ Mid-term project/Prototype app/__pycache__/
 Week 7/Day 2/data/
 Week 8/Day 1/cache/
 Week 8/Day 1/data/
+Week 8/Day 2/Application Start/.env
+Week 8/Day 2/data.faiss

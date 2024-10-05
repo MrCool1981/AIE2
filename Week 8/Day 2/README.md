@@ -5,7 +5,7 @@ In today's assignment, we'll be creating an Open Source LLM-powered LangChain RA
 There are 2 main sections to this assignment:
 
 ## Build 🏗️
-
+v
 ### Build Task 1: Deploy LLM and Embedding Model to SageMaker Endpoint Through Hugging Face Inference Endpoints
 
 #### LLM Endpoint
@@ -39,7 +39,7 @@ We'll be using `Snowflake/snowflake-arctic-embed-m` for our embedding model toda
 
 The process is the same as the LLM - but we'll make a few specific tweaks:
 
-Let's make sure our set-up reflects the following screenshots:
+Let's make sure our set-up reflects the following screenshots:v
 
 ![image](https://i.imgur.com/IHh8FnC.png)
 
